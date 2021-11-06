@@ -1,14 +1,9 @@
 ﻿using BlazorSample.Shared;
-using System.Text.Json;
+using System.Net.Http.Json;
 
 namespace BlazorSample.App.Services
 {
-    public interface IEmployeeDataService
-    {
-        Task<IEnumerable<Employee>> GetEmployees();
-    }
-
-    public class EmployeeDataService : IEmployeeDataService
+    public class EmployeeDataService
     {
         private readonly HttpClient _httpClient;
 
@@ -19,8 +14,12 @@ namespace BlazorSample.App.Services
 
         public async Task<IEnumerable<Employee>> GetEmployees()
         {
-            using var employeeStream = await _httpClient.GetStreamAsync("employees");
-            return await JsonSerializer.DeserializeAsync<IEnumerable<Employee>>(employeeStream, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            return await _httpClient.GetFromJsonAsync<IEnumerable<Employee>>("employees");
+        }
+
+        public async Task AddEmployee(Employee employee)
+        {
+            await _httpClient.PostAsJsonAsync("employees", employee);
         }
     }
 }

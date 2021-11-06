@@ -25,9 +25,13 @@ else
                 <td>@employee.Id</td>
                 <td>@employee.FirstName</td>
                 <td>@employee.LastName</td>
+                <td>@employee.IsActive</td>
                 <td></td>
             </tr>
             }
         </tbody>
     </table>
 }
+
+<button @onclick="QuickAddEmployee" class="btn btn-dark table-btn quick-add-btn">&nbsp;&nbsp;+&nbsp;&nbsp;</button>
+<AddEmployeeDialog @ref="AddEmployeeDialog" CloseEventCallback="@AddEmployeeDialog_OnDialogClose"></AddEmployeeDialog>
