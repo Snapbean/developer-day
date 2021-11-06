@@ -17,7 +17,7 @@ var employees = new List<Employee>
 {
     new Employee{Id = 1, FirstName = "Sara", LastName = "Meier", IsActive = true},
     new Employee{Id = 2, FirstName = "Daniel", LastName = "Mock", IsActive = true},
-    new Employee{Id = 3, FirstName = "Bettina", LastName = "LuginbÃ¼hle", IsActive = false}
+    new Employee{Id = 3, FirstName = "Bettina", LastName = "Luginbühl", IsActive = false}
 };
 
 app.MapGet("/employees", () =>
