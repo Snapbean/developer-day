@@ -21,5 +21,10 @@ namespace BlazorSample.App.Services
         {
             await _httpClient.PostAsJsonAsync("employees", employee);
         }
+
+        public async Task<Employee> GetEmployeeDetail(int id)
+        {
+            return await _httpClient.GetFromJsonAsync<Employee>($"employees/{id}");
+        }
     }
 }

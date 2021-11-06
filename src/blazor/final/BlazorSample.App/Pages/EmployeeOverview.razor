@@ -26,7 +26,11 @@ else
                 <td>@employee.FirstName</td>
                 <td>@employee.LastName</td>
                 <td>@employee.IsActive</td>
-                <td></td>
+                <td>
+                    <a href="@($"employees/{employee.Id}")" class="btn btn-primary table-btn">
+                        <span class="oi oi-info" aria-hidden="true"></span>
+                    </a>
+                </td>
             </tr>
             }
         </tbody>

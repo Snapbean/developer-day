@@ -25,6 +25,11 @@ app.MapGet("/employees", () =>
     return employees;
 });
 
+app.MapGet("/employees/{id}", (int id) => 
+{ 
+    return employees.SingleOrDefault(x => x.Id == id); 
+});
+
 app.MapPost("/employees", (Employee employee) =>
 {
     employees.Add(employee);
