@@ -14,7 +14,7 @@ namespace BlazorSample.App.Components
         public bool ShowDialog { get; set; }
 
         [Parameter]
-        public EventCallback<bool> CloseEventCallback { get; set; }
+        public EventCallback CloseEventCallback { get; set; }
 
         public void Show()
         {
@@ -41,7 +41,7 @@ namespace BlazorSample.App.Components
             await EmployeeDataService.AddEmployee(Employee);
             ShowDialog = false;
 
-            await CloseEventCallback.InvokeAsync(true);
+            await CloseEventCallback.InvokeAsync();
             StateHasChanged();
         }
     }

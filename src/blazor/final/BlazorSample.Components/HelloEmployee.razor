@@ -1,0 +1,19 @@
+﻿@using BlazorSample.Shared
+@using Microsoft.AspNetCore.Components
+@using Microsoft.JSInterop
+
+@inject IJSRuntime JSRuntime
+
+<div id="@elementId"></div>
+
+@code {
+    string elementId = $"employee-{Guid.NewGuid()}";
+
+    [Parameter]
+    public Employee Employee { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeVoidAsync("helloEmployee.displayMessage", elementId, Employee);
+    }
+}
