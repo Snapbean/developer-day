@@ -1,0 +1,41 @@
+﻿@page "/employees"
+
+<h3>Mitarbeiter</h3>
+
+@if (Employees == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Vorname</th>
+                <th>Nachname</th>
+                <th>Aktiv</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Employees)
+            {
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.FirstName</td>
+                <td>@employee.LastName</td>
+                <td>@employee.IsActive</td>
+                <td>
+                    <a href="@($"employees/{employee.Id}")" class="btn btn-primary table-btn">
+                        <span class="oi oi-info" aria-hidden="true"></span>
+                    </a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<button @onclick="QuickAddEmployee" class="btn btn-dark table-btn quick-add-btn">&nbsp;&nbsp;+&nbsp;&nbsp;</button>
+<AddEmployeeDialog @ref="AddEmployeeDialog" CloseEventCallback="@AddEmployeeDialog_OnDialogClose"></AddEmployeeDialog>
