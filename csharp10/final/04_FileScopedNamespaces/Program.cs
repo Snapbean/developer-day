@@ -5,13 +5,3 @@
 public class MyClass
 {
 }
-
-// old fashioned way
-/*
-namespace MyNamespace
-{
-    public class MyClass
-    {
-    }
-}
-*/
