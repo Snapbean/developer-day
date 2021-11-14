@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{33AAC1BF-2162-4C2E-909E-3E9362B283AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalApi", "MinimalApi\MinimalApi.csproj", "{A01BD6E7-8021-4474-A1DA-98A987C1BC7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33AAC1BF-2162-4C2E-909E-3E9362B283AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33AAC1BF-2162-4C2E-909E-3E9362B283AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33AAC1BF-2162-4C2E-909E-3E9362B283AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33AAC1BF-2162-4C2E-909E-3E9362B283AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A01BD6E7-8021-4474-A1DA-98A987C1BC7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A01BD6E7-8021-4474-A1DA-98A987C1BC7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A01BD6E7-8021-4474-A1DA-98A987C1BC7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A01BD6E7-8021-4474-A1DA-98A987C1BC7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {107941C9-188E-4971-9C28-4E2A42D26A35}
+	EndGlobalSection
+EndGlobal
